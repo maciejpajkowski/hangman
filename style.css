@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  color: #ddd;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  align-items: center;
+  background: rgb(46, 46, 46);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  position: relative;
+  width: 100vw;
+}
+
+.title {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin: 1.2rem;
+  opacity: 0;
+  padding: 0.4rem;
+}
+
+.app {
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  height: 80%;
+  width: 90%
+}
+
+.hangman {
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  position: relative;
+  width: 30%;
+}
+
+.hangman__text,
+.hangman__secondtext {
+  opacity: 0;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.hangman__secondtext {
+  font-size: 0.8rem;
+}
+
+.hangman__variables {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  opacity: 0;
+}
+
+.hangman__life-counter {
+  color: rgb(36, 138, 61);
+  font-size: 5rem;
+}
+
+.hangman__used-letters {
+  color: rgb(182, 20, 20);
+  margin-top: 0.7rem;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+}
+
+.game__word-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: center;
+  width: 100%;
+}
+
+.game__letters-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: center;
+  width: 100%;
+}
+
+.game__letter,
+.game__word-letter {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid rgba(0,0,0,0.2);
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  margin: 0.2rem;
+  transition: all 0.3s;
+  width: 3rem;
+}
+
+.game__letter:hover {
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.game__letter:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.game__letter:disabled {
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.gameover {
+  align-items: center;
+  background: #000;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+}
+
+.gameover__youdied {
+  display: none;
+  color: darkred;
+  font-size: 3rem;
+}
+
+@keyframes gameover {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.3);
+  }
+}
+
+.tryagain {
+  opacity: 0;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+
+.youwin {
+  align-items: center;
+  background: rgb(32, 32, 32);
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+}
+
+.youwin__victory {
+  display: none;
+  color: rgb(240, 205, 51);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.copyright {
+  bottom: 2%;
+  color: #444;
+  font-size: 0.4rem;
+  left: 5%;
+  line-height: 0.7rem;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 2;
+}
+
+
+@media all and (max-width: 1600px) {
+    * {
+        font-size: 24px;
+    }
+}
+
+@media all and (max-width: 992px) {
+    * {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    * {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 360px) {
+    * {
+        font-size: 10px;
+    }
+}

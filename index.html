@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman.</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+    <main class="app-container">
+        <header class="title">Hangman.</header>
+        <div class="app">
+            <div class="hangman">
+                <div class="hangman__text"></div>
+                <div class="hangman__secondtext"></div>
+                <div class="hangman__variables">
+                    <div class="hangman__life-counter-text">Lives remaining:</div>
+                    <div class="hangman__life-counter"></div>
+                    <div class="hangman__mistakes">Wrong letters:</div>
+                    <div class="hangman__used-letters"></div>
+                </div>
+                
+            </div>
+            <div class="game">
+                <div class="game__word-container">
+                </div>
+                <div class="game__letters-container">
+                    <button class="game__letter">A</button>
+                    <button class="game__letter">B</button>
+                    <button class="game__letter">C</button>
+                    <button class="game__letter">D</button>
+                    <button class="game__letter">E</button>
+                    <button class="game__letter">F</button>
+                    <button class="game__letter">G</button>
+                    <button class="game__letter">H</button>
+                    <button class="game__letter">I</button>
+                    <button class="game__letter">J</button>
+                    <button class="game__letter">K</button>
+                    <button class="game__letter">L</button>
+                    <button class="game__letter">M</button>
+                    <button class="game__letter">N</button>
+                    <button class="game__letter">O</button>
+                    <button class="game__letter">P</button>
+                    <button class="game__letter">Q</button>
+                    <button class="game__letter">R</button>
+                    <button class="game__letter">S</button>
+                    <button class="game__letter">T</button>
+                    <button class="game__letter">U</button>
+                    <button class="game__letter">V</button>
+                    <button class="game__letter">W</button>
+                    <button class="game__letter">X</button>
+                    <button class="game__letter">Y</button>
+                    <button class="game__letter">Z</button>
+                </div>
+            </div>
+        </div>
+        <div class="gameover">
+            <div class="gameover__youdied">YOU DIED</div>
+            <button class="tryagain">Try again?</button>
+        </div>
+        <div class="youwin">
+            <div class="youwin__victory">VICTORY ACHIEVED</div>
+            <button class="tryagain">Play again?</button>
+        </div>
+        <span class="copyright">v1.0.1<br>Copyright © Maciej P.</span>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./hangman.js"></script>
+</body>
+</html>
